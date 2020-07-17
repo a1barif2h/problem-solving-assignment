@@ -1,8 +1,12 @@
 // #Problem-1: CONVERTER TO CHANGE FEET TO MILE
 function feetToMile(feet) {
-  let mile = feet * 0.000189394;
-  mile = mile.toFixed(8);
-  return mile;
+    let mile = feet * 0.000189394;
+    mile = mile.toFixed(8);
+    if (feet < 0) {
+        return "Please enter a valid input!"
+    } else {
+        return mile;
+    }
 }
 
 // #Problem-2: WOOD CALCULATOR
