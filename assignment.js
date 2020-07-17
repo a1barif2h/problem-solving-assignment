@@ -4,7 +4,6 @@ function feetToMile(feet) {
   mile = mile.toFixed(8);
   return mile;
 }
-console.log("Mile = ", feetToMile(10));
 
 // #Problem-2: WOOD CALCULATOR
 function woodCalculator(chair, table, bed) {
@@ -14,7 +13,6 @@ function woodCalculator(chair, table, bed) {
     let totalNeedWood = forChair + forTable + forBed;
     return totalNeedWood;
 }
-console.log("You nedd ", woodCalculator(28, 32, 42), "Cubic Feet Wood.");
 
 // #Problem-3: BRICKS CALCULATOR
 function brickCalculator(floors) {
@@ -50,4 +48,15 @@ function brickCalculator(floors) {
         return totalBricksNeeded;
     }
 }
-console.log("You need ", brickCalculator(28), " Bricks.");
+
+// #Problem-4: tinyFriends (FIND THE SMALL CHARECTER FRIEND)
+function tinyFriend(names) {
+    let smallFriend = names[0];;
+    for (let i = 1; i < names.length; i++) {
+        let curentName = names[i];
+        if (curentName.length < smallFriend.length) {
+            smallFriend = curentName;
+        }
+    }
+    return smallFriend;
+}
