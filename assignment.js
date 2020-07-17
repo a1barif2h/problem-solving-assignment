@@ -3,7 +3,7 @@ function feetToMile(feet) {
     let mile = feet * 0.000189394;
     mile = mile.toFixed(8);
     if (feet < 0) {
-        return "Please enter a valid input!"
+        return "Please enter a valid input!Negative value is not allowed!"
     } else {
         return mile;
     }
@@ -21,7 +21,7 @@ function woodCalculator(chair, table, bed) {
 // #Problem-3: BRICKS CALCULATOR
 function brickCalculator(floors) {
     if (floors <= 0) {
-        return "Please enter an valid floors numbers!"
+        return "Please enter an valid floors numbers!Negative value is not allowed!"
     } else if (floors <= 10) {
         let floorsToFeet = floors * 15;
         let feetToBricks = floorsToFeet * 1000;
