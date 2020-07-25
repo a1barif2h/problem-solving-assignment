@@ -3,12 +3,13 @@ function feetToMile(feet) {
     let mile = feet * 0.000189394;
     mile = mile.toFixed(8);
     if (feet < 0) {
-        return "Please enter a valid input!Negative value is not allowed!"
+        return 0;
     } else {
         return mile;
     }
 }
-
+let result = feetToMile(5000);
+console.log(result);
 // #Problem-2: WOOD CALCULATOR
 function woodCalculator(chair, table, bed) {
     forChair = chair * 1;
@@ -21,7 +22,7 @@ function woodCalculator(chair, table, bed) {
 // #Problem-3: BRICKS CALCULATOR
 function brickCalculator(floors) {
     if (floors <= 0) {
-        return "Please enter an valid floors numbers!Negative value is not allowed!"
+        return 0;
     } else if (floors <= 10) {
         let floorsToFeet = floors * 15;
         let feetToBricks = floorsToFeet * 1000;
@@ -34,7 +35,8 @@ function brickCalculator(floors) {
         let firstTenFloorsFeetToBricks = firstTenFloorsToFeet * 1000;
         let theRestOfTheFloorsToFeet = theRestOfTheFloors * 12;
         let theRestOfTheFloorsFeetToBricks = theRestOfTheFloorsToFeet * 1000;
-        let totalBricksNeeded = firstTenFloorsFeetToBricks + theRestOfTheFloorsFeetToBricks;
+        let totalBricksNeeded =
+            firstTenFloorsFeetToBricks + theRestOfTheFloorsFeetToBricks;
         return totalBricksNeeded;
     } else if (floors > 20) {
         let totalFloors = floors;
@@ -48,18 +50,21 @@ function brickCalculator(floors) {
         let secondTenFloorsFeetToBricks = secondTenFloorsToFeet * 1000;
         let theRestOfTheFloorsToFeet = theRestOfTheFloors * 10;
         let theRestOfTheFloorsFeetToBricks = theRestOfTheFloorsToFeet * 1000;
-        let totalBricksNeeded = firstTenFloorsFeetToBricks + secondTenFloorsFeetToBricks + theRestOfTheFloorsFeetToBricks;
+        let totalBricksNeeded =
+            firstTenFloorsFeetToBricks +
+            secondTenFloorsFeetToBricks +
+            theRestOfTheFloorsFeetToBricks;
         return totalBricksNeeded;
     }
 }
-
+console.log(brickCalculator(30) * 12);
 // #Problem-4: tinyFriends (FIND THE SMALL CHARECTER FRIEND)
 function tinyFriend(names) {
-    let smallFriend = names[0];;
+    let smallFriend = names[0];
     for (let i = 1; i < names.length; i++) {
-        let curentName = names[i];
-        if (curentName.length < smallFriend.length) {
-            smallFriend = curentName;
+        let currentName = names[i];
+        if (currentName.length < smallFriend.length) {
+            smallFriend = currentName;
         }
     }
     return smallFriend;
